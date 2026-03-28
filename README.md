@@ -1,4 +1,4 @@
-## LinkedIn — Clebson Castro
+## LinkedIn | Clebson Castro
 
 ### Headline
 **Executivo Comercial & Expansão | Franchising · B2B · Growth | Ex-Unilever · Coca-Cola · Citi · Unimed**
@@ -9,9 +9,9 @@
 
 Construí minha carreira na interseção entre estratégia e resultado real.
 
-Passei por Unilever, Coca-Cola, Citi e Unimed — não como espectador, mas como protagonista de reestruturações comerciais, expansões de canal e projetos que moveram números relevantes. Cada experiência me deu algo que nenhum curso entrega: a capacidade de ler um negócio por dentro e saber exatamente onde atuar para gerar crescimento sustentável.
+Passei por Unilever, Coca-Cola, Citi e Unimed. Não como espectador, mas como protagonista de reestruturações comerciais, expansões de canal e projetos que moveram números relevantes. Cada experiência me deu algo que nenhum curso entrega: a capacidade de ler um negócio por dentro e saber exatamente onde atuar para gerar crescimento sustentável.
 
-Hoje atuo como consultor estratégico para empresas que querem escalar com inteligência — seja através de franchising, reorganização comercial, estruturação de canais B2B ou aceleração via Growth e tráfego pago. Também aplico inteligência artificial como ferramenta de performance comercial, não como buzzword.
+Hoje atuo como consultor estratégico para empresas que querem escalar com inteligência, seja através de franchising, reorganização comercial, estruturação de canais B2B ou aceleração via Growth e tráfego pago. Também aplico inteligência artificial como ferramenta de performance comercial, não como buzzword.
 
 Alguns marcos da minha trajetória:
 - Estruturação do modelo de loja e manuais de canal de venda direta na Unimed
