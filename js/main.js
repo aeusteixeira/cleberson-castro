@@ -132,10 +132,39 @@
       if (isScrolled !== scrolled) {
         scrolled = isScrolled;
         nav.style.borderBottomColor = scrolled
-          ? 'rgba(13,13,13,0.08)'
-          : 'rgba(13,13,13,0.03)';
+          ? 'rgba(26,45,74,0.08)'
+          : 'rgba(26,45,74,0.03)';
       }
     }, { passive: true });
+  }
+
+  // --- Scroll Spy: active nav link ---
+  function initScrollSpy() {
+    var sections = document.querySelectorAll('section[id]');
+    var navLinks = document.querySelectorAll('.nav__link');
+    if (!sections.length || !navLinks.length) return;
+
+    var observer = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            var id = entry.target.getAttribute('id');
+            navLinks.forEach(function (link) {
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('active');
+              } else {
+                link.classList.remove('active');
+              }
+            });
+          }
+        });
+      },
+      { threshold: 0.2, rootMargin: '-72px 0px -40% 0px' }
+    );
+
+    sections.forEach(function (section) {
+      observer.observe(section);
+    });
   }
 
   // --- Init ---
@@ -145,5 +174,6 @@
     initCounters();
     initMobileNav();
     initNavScroll();
+    initScrollSpy();
   });
 })();
