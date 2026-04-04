@@ -349,13 +349,15 @@ button {
 }
 
 .hero__tagline {
-  font-family: var(--font-display);
-  font-size: clamp(1.3rem, 2.2vw, 1.7rem);
-  font-weight: 400;
-  font-style: italic;
-  color: var(--color-ink-soft);
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--color-muted);
+  line-height: 1.7;
   margin-bottom: var(--space-lg);
   position: relative;
+  max-width: 480px;
 }
 
 .hero__ctas {
@@ -404,6 +406,18 @@ button {
 
 .btn--outline:hover {
   border-color: var(--color-gold);
+  color: var(--color-gold);
+}
+
+.btn--ghost {
+  background: transparent;
+  color: var(--color-muted);
+  border: none;
+  padding: 1rem 1rem;
+  font-size: 0.68rem;
+}
+
+.btn--ghost:hover {
   color: var(--color-gold);
 }
 
@@ -746,10 +760,22 @@ button {
 
 .expertise__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 1px;
   background: var(--color-line);
   border: 1px solid var(--color-line);
+}
+
+.expertise__card--featured {
+  border-left: 3px solid var(--color-gold);
+}
+
+.expertise__card--featured .expertise__card-number {
+  opacity: 0.3;
+}
+
+.expertise__card--featured:hover .expertise__card-number {
+  opacity: 0.5;
 }
 
 .expertise__card {
@@ -1014,6 +1040,295 @@ button {
   transform: scale(1.1);
 }
 
+/* ===== COMPETENCIES ===== */
+.competencies {
+  padding: var(--space-2xl) 0;
+  background: var(--color-cream);
+}
+
+.competencies__header {
+  max-width: 760px;
+  margin: 0 auto var(--space-lg);
+  text-align: center;
+}
+
+.competencies__header .label {
+  margin-bottom: var(--space-sm);
+}
+
+.competencies__header em {
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+.competencies__intro {
+  font-size: 1rem;
+  color: var(--color-muted);
+  line-height: 1.75;
+  margin-top: var(--space-sm);
+}
+
+.competencies__pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pill {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  border: 1px solid rgba(46, 93, 158, 0.3);
+  padding: 0.5rem 1.2rem;
+  background: rgba(46, 93, 158, 0.04);
+  transition: background var(--duration-fast) var(--ease-out),
+              color var(--duration-fast) var(--ease-out),
+              border-color var(--duration-fast) var(--ease-out);
+  cursor: default;
+}
+
+.pill:hover {
+  background: var(--color-gold);
+  color: var(--color-cream);
+  border-color: var(--color-gold);
+}
+
+/* ===== CASES ===== */
+.cases {
+  padding: var(--space-2xl) 0;
+  background: var(--color-cream-light);
+}
+
+.cases__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.cases__header .label {
+  margin-bottom: var(--space-sm);
+}
+
+.cases__header em {
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+.cases__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.cases__card {
+  background: var(--color-cream);
+  padding: var(--space-lg) var(--space-md);
+  border-top: 2px solid var(--color-gold);
+  position: relative;
+}
+
+.cases__card--placeholder {
+  opacity: 0.45;
+  border-top: 2px dashed var(--color-gold);
+  background: transparent;
+  border: 1px dashed var(--color-line);
+  border-top: 2px dashed var(--color-gold);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  text-align: center;
+}
+
+.cases__card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.cases__card-title {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+}
+
+.cases__flow {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.cases__flow dt {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  margin-bottom: 0.2rem;
+}
+
+.cases__flow dd {
+  font-size: 0.92rem;
+  color: var(--color-ink-soft);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.cases__placeholder-text {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+/* ===== INSIGHTS ===== */
+.insights {
+  padding: var(--space-2xl) 0;
+  background: var(--color-cream);
+}
+
+.insights__header {
+  text-align: center;
+  margin-bottom: var(--space-xl);
+}
+
+.insights__header .label {
+  margin-bottom: var(--space-sm);
+}
+
+.insights__header em {
+  font-style: italic;
+  color: var(--color-gold);
+}
+
+.insights__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+}
+
+.insights__card {
+  border: 1px solid var(--color-line);
+  padding: var(--space-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  transition: border-color var(--duration-fast) var(--ease-out);
+}
+
+.insights__card:hover {
+  border-color: var(--color-gold);
+}
+
+.insights__card--placeholder {
+  opacity: 0.45;
+  border-style: dashed;
+}
+
+.insights__card-theme {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+}
+
+.insights__card-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0.25rem 0 0.5rem;
+}
+
+.insights__card-desc {
+  font-size: 0.88rem;
+  color: var(--color-muted);
+  line-height: 1.7;
+  flex: 1;
+}
+
+.insights__card-link {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  margin-top: var(--space-sm);
+  transition: opacity var(--duration-fast) var(--ease-out);
+}
+
+.insights__card-link:hover {
+  opacity: 0.7;
+}
+
+/* CTA Duplo — Contact Doors */
+.contact__doors {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.btn--door {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: var(--space-md) var(--space-lg);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  min-width: 240px;
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.btn--door small {
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  opacity: 0.5;
+  text-transform: none;
+  font-family: var(--font-body);
+}
+
+.btn--door--primary {
+  background: var(--color-gold);
+  color: var(--color-cream);
+  border: 1px solid var(--color-gold);
+}
+
+.btn--door--primary:hover {
+  background: var(--color-gold-light);
+  border-color: var(--color-gold-light);
+  transform: translateY(-2px);
+}
+
+.btn--door--secondary {
+  background: transparent;
+  color: rgba(245, 242, 236, 0.7);
+  border: 1px solid rgba(245, 242, 236, 0.15);
+}
+
+.btn--door--secondary:hover {
+  border-color: var(--color-gold);
+  color: var(--color-gold);
+  transform: translateY(-2px);
+}
+
 /* WhatsApp — CTA principal */
 .btn--contact-primary {
   background: var(--color-gold);
@@ -1133,6 +1448,14 @@ button {
   .expertise__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .cases__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .insights__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
@@ -1198,9 +1521,20 @@ button {
     font-size: 10rem;
   }
 
-  .contact__buttons {
+  .contact__buttons,
+  .contact__doors {
     flex-direction: column;
     align-items: center;
+  }
+
+  .cases__grid,
+  .insights__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn--door {
+    width: 100%;
+    min-width: unset;
   }
 
   .footer .container {
