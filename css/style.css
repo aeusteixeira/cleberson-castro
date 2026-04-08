@@ -1400,6 +1400,25 @@ button {
   color: var(--color-gold);
 }
 
+.footer__dev {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: rgba(245, 242, 236, 0.2);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.footer__dev a {
+  color: rgba(245, 242, 236, 0.35);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+
+.footer__dev a:hover {
+  color: var(--color-gold);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
   .hero {
