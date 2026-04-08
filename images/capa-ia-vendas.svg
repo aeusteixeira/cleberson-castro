@@ -1,0 +1,158 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f5f2ec"/>
+
+  <!-- Top line -->
+  <rect x="0" y="0" width="1200" height="3" fill="#1a2d4a"/>
+  <!-- Bottom line -->
+  <rect x="0" y="627" width="1200" height="3" fill="#2e5d9e"/>
+
+  <!-- Left vertical bar -->
+  <rect x="60" y="60" width="2" height="510" fill="#2e5d9e" opacity="0.35"/>
+
+  <!-- ======= GRID / CIRCUIT ILLUSTRATION (right side) ======= -->
+
+  <!-- Grid dots -->
+  <g fill="#1a2d4a">
+    <!-- Row 1 y=140 -->
+    <circle cx="700" cy="140" r="2.5" opacity="0.15"/>
+    <circle cx="760" cy="140" r="2.5" opacity="0.15"/>
+    <circle cx="820" cy="140" r="2.5" opacity="0.2"/>
+    <circle cx="880" cy="140" r="2.5" opacity="0.15"/>
+    <circle cx="940" cy="140" r="2.5" opacity="0.2"/>
+    <circle cx="1000" cy="140" r="2.5" opacity="0.15"/>
+    <circle cx="1060" cy="140" r="2.5" opacity="0.15"/>
+    <circle cx="1120" cy="140" r="2.5" opacity="0.1"/>
+
+    <!-- Row 2 y=210 -->
+    <circle cx="700" cy="210" r="2.5" opacity="0.2"/>
+    <circle cx="760" cy="210" r="2.5" opacity="0.25"/>
+    <circle cx="820" cy="210" r="2.5" opacity="0.2"/>
+    <circle cx="880" cy="210" r="2.5" opacity="0.3"/>
+    <circle cx="940" cy="210" r="2.5" opacity="0.25"/>
+    <circle cx="1000" cy="210" r="2.5" opacity="0.2"/>
+    <circle cx="1060" cy="210" r="2.5" opacity="0.2"/>
+    <circle cx="1120" cy="210" r="2.5" opacity="0.15"/>
+
+    <!-- Row 3 y=280 -->
+    <circle cx="700" cy="280" r="2.5" opacity="0.25"/>
+    <circle cx="760" cy="280" r="2.5" opacity="0.3"/>
+    <circle cx="820" cy="280" r="2.5" opacity="0.35"/>
+    <circle cx="880" cy="280" r="2.5" opacity="0.4"/>
+    <circle cx="940" cy="280" r="2.5" opacity="0.4"/>
+    <circle cx="1000" cy="280" r="2.5" opacity="0.35"/>
+    <circle cx="1060" cy="280" r="2.5" opacity="0.25"/>
+    <circle cx="1120" cy="280" r="2.5" opacity="0.2"/>
+
+    <!-- Row 4 y=350 -->
+    <circle cx="700" cy="350" r="2.5" opacity="0.2"/>
+    <circle cx="760" cy="350" r="2.5" opacity="0.3"/>
+    <circle cx="820" cy="350" r="2.5" opacity="0.4"/>
+    <circle cx="880" cy="350" r="2.5" opacity="0.5"/>
+    <circle cx="940" cy="350" r="2.5" opacity="0.45"/>
+    <circle cx="1000" cy="350" r="2.5" opacity="0.3"/>
+    <circle cx="1060" cy="350" r="2.5" opacity="0.2"/>
+    <circle cx="1120" cy="350" r="2.5" opacity="0.15"/>
+
+    <!-- Row 5 y=420 -->
+    <circle cx="700" cy="420" r="2.5" opacity="0.15"/>
+    <circle cx="760" cy="420" r="2.5" opacity="0.2"/>
+    <circle cx="820" cy="420" r="2.5" opacity="0.25"/>
+    <circle cx="880" cy="420" r="2.5" opacity="0.3"/>
+    <circle cx="940" cy="420" r="2.5" opacity="0.25"/>
+    <circle cx="1000" cy="420" r="2.5" opacity="0.2"/>
+    <circle cx="1060" cy="420" r="2.5" opacity="0.15"/>
+    <circle cx="1120" cy="420" r="2.5" opacity="0.1"/>
+
+    <!-- Row 6 y=490 -->
+    <circle cx="700" cy="490" r="2.5" opacity="0.1"/>
+    <circle cx="760" cy="490" r="2.5" opacity="0.15"/>
+    <circle cx="820" cy="490" r="2.5" opacity="0.15"/>
+    <circle cx="880" cy="490" r="2.5" opacity="0.2"/>
+    <circle cx="940" cy="490" r="2.5" opacity="0.15"/>
+    <circle cx="1000" cy="490" r="2.5" opacity="0.12"/>
+    <circle cx="1060" cy="490" r="2.5" opacity="0.1"/>
+    <circle cx="1120" cy="490" r="2.5" opacity="0.08"/>
+  </g>
+
+  <!-- Grid lines horizontal -->
+  <g stroke="#1a2d4a" stroke-width="0.5" opacity="0.07">
+    <line x1="700" y1="210" x2="1120" y2="210"/>
+    <line x1="700" y1="280" x2="1120" y2="280"/>
+    <line x1="700" y1="350" x2="1120" y2="350"/>
+    <line x1="700" y1="420" x2="1120" y2="420"/>
+  </g>
+
+  <!-- Grid lines vertical -->
+  <g stroke="#1a2d4a" stroke-width="0.5" opacity="0.07">
+    <line x1="820" y1="140" x2="820" y2="490"/>
+    <line x1="880" y1="140" x2="880" y2="490"/>
+    <line x1="940" y1="140" x2="940" y2="490"/>
+    <line x1="1000" y1="140" x2="1000" y2="490"/>
+  </g>
+
+  <!-- Circuit-style paths -->
+  <g stroke="#2e5d9e" stroke-width="1.2" fill="none" opacity="0.25">
+    <polyline points="700,280 760,280 760,210 880,210 880,140"/>
+    <polyline points="940,490 940,420 1060,420 1060,350 1120,350"/>
+    <polyline points="820,490 820,420 700,420 700,350 760,350"/>
+  </g>
+
+  <!-- Highlight nodes (active) -->
+  <circle cx="880" cy="350" r="7" fill="#2e5d9e" opacity="0.7"/>
+  <circle cx="880" cy="350" r="12" fill="none" stroke="#2e5d9e" stroke-width="1" opacity="0.3"/>
+
+  <circle cx="760" cy="280" r="5" fill="#1a2d4a" opacity="0.6"/>
+  <circle cx="1000" cy="280" r="5" fill="#1a2d4a" opacity="0.6"/>
+  <circle cx="880" cy="210" r="5" fill="#2e5d9e" opacity="0.5"/>
+  <circle cx="940" cy="420" r="5" fill="#1a2d4a" opacity="0.5"/>
+
+  <!-- Scanning line effect -->
+  <line x1="700" y1="315" x2="1120" y2="315" stroke="#2e5d9e" stroke-width="0.5" opacity="0.15"/>
+
+  <!-- ======= TEXT (left side) ======= -->
+
+  <text x="84" y="108"
+    font-family="'JetBrains Mono', monospace"
+    font-size="11"
+    fill="#2e5d9e"
+    letter-spacing="4">IA &amp; VENDAS</text>
+
+  <rect x="84" y="118" width="140" height="1" fill="#1a2d4a" opacity="0.15"/>
+
+  <text x="84" y="210"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="58"
+    font-style="italic"
+    font-weight="400"
+    fill="#2e5d9e"
+    letter-spacing="-0.5">IA no comercial:</text>
+
+  <text x="84" y="282"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="52"
+    font-weight="300"
+    fill="#1a2d4a"
+    letter-spacing="-0.5">o que funciona</text>
+
+  <text x="84" y="348"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="52"
+    font-weight="300"
+    fill="#1a2d4a"
+    letter-spacing="-0.5">de verdade</text>
+
+  <text x="84" y="570"
+    font-family="'JetBrains Mono', monospace"
+    font-size="11"
+    fill="#1a2d4a"
+    letter-spacing="3"
+    opacity="0.5">CLEBSON CASTRO</text>
+
+</svg>

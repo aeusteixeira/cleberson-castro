@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f5f2ec"/>
+
+  <!-- Top line -->
+  <rect x="0" y="0" width="1200" height="3" fill="#1a2d4a"/>
+  <!-- Bottom line -->
+  <rect x="0" y="627" width="1200" height="3" fill="#2e5d9e"/>
+
+  <!-- Left vertical bar -->
+  <rect x="60" y="60" width="2" height="510" fill="#2e5d9e" opacity="0.35"/>
+
+  <!-- ======= BARS / GROWTH CHART (right side) ======= -->
+
+  <!-- Baseline -->
+  <line x1="680" y1="542" x2="1160" y2="542" stroke="#1a2d4a" stroke-width="1" opacity="0.15"/>
+
+  <!-- Bar 1 -->
+  <rect x="698" y="472" width="44" height="70" fill="#1a2d4a" opacity="0.12"/>
+  <rect x="698" y="470" width="44" height="2" fill="#2e5d9e" opacity="0.3"/>
+
+  <!-- Bar 2 -->
+  <rect x="762" y="422" width="44" height="120" fill="#1a2d4a" opacity="0.16"/>
+  <rect x="762" y="420" width="44" height="2" fill="#2e5d9e" opacity="0.35"/>
+
+  <!-- Bar 3 -->
+  <rect x="826" y="352" width="44" height="190" fill="#1a2d4a" opacity="0.2"/>
+  <rect x="826" y="350" width="44" height="2" fill="#2e5d9e" opacity="0.4"/>
+
+  <!-- Bar 4 -->
+  <rect x="890" y="272" width="44" height="270" fill="#1a2d4a" opacity="0.25"/>
+  <rect x="890" y="270" width="44" height="2" fill="#2e5d9e" opacity="0.5"/>
+
+  <!-- Bar 5 -->
+  <rect x="954" y="182" width="44" height="360" fill="#2e5d9e" opacity="0.2"/>
+  <rect x="954" y="180" width="44" height="2" fill="#2e5d9e" opacity="0.7"/>
+
+  <!-- Bar 6 — tallest, highlighted -->
+  <rect x="1018" y="102" width="44" height="440" fill="#2e5d9e" opacity="0.28"/>
+  <rect x="1018" y="100" width="44" height="4" fill="#2e5d9e" opacity="0.9"/>
+
+  <!-- Bar 7 outline only — future / potential -->
+  <rect x="1082" y="72" width="44" height="470" fill="none" stroke="#2e5d9e" stroke-width="1" opacity="0.2" stroke-dasharray="4 3"/>
+  <rect x="1082" y="70" width="44" height="4" fill="#2e5d9e" opacity="0.4"/>
+
+  <!-- Trend line -->
+  <polyline
+    points="720,472 784,422 848,352 912,272 976,182 1040,102"
+    fill="none"
+    stroke="#2e5d9e"
+    stroke-width="1.5"
+    opacity="0.35"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <!-- Dots on trend line -->
+  <circle cx="720" cy="472" r="3.5" fill="#2e5d9e" opacity="0.4"/>
+  <circle cx="784" cy="422" r="3.5" fill="#2e5d9e" opacity="0.45"/>
+  <circle cx="848" cy="352" r="3.5" fill="#2e5d9e" opacity="0.5"/>
+  <circle cx="912" cy="272" r="3.5" fill="#2e5d9e" opacity="0.6"/>
+  <circle cx="976" cy="182" r="3.5" fill="#2e5d9e" opacity="0.7"/>
+  <circle cx="1040" cy="102" r="5" fill="#2e5d9e" opacity="0.85"/>
+
+  <!-- Arrow on last dot -->
+  <line x1="1040" y1="102" x2="1040" y2="70" stroke="#2e5d9e" stroke-width="1.5" opacity="0.5"/>
+  <polyline points="1032,80 1040,68 1048,80" fill="none" stroke="#2e5d9e" stroke-width="1.5" opacity="0.5" stroke-linejoin="round"/>
+
+  <!-- Value label on top bar -->
+  <text x="1040" y="92"
+    font-family="'JetBrains Mono', monospace"
+    font-size="9"
+    fill="#2e5d9e"
+    text-anchor="middle"
+    opacity="0.6">47%</text>
+
+  <!-- Low value label -->
+  <text x="720" y="466"
+    font-family="'JetBrains Mono', monospace"
+    font-size="9"
+    fill="#1a2d4a"
+    text-anchor="middle"
+    opacity="0.4">13%</text>
+
+  <!-- ======= TEXT (left side) ======= -->
+
+  <text x="84" y="108"
+    font-family="'JetBrains Mono', monospace"
+    font-size="11"
+    fill="#2e5d9e"
+    letter-spacing="4">GROWTH</text>
+
+  <rect x="84" y="118" width="100" height="1" fill="#1a2d4a" opacity="0.15"/>
+
+  <text x="84" y="210"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="50"
+    font-weight="300"
+    fill="#1a2d4a"
+    letter-spacing="-0.5">A maioria das</text>
+
+  <text x="84" y="272"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="50"
+    font-weight="300"
+    fill="#1a2d4a"
+    letter-spacing="-0.5">empresas não tem</text>
+
+  <text x="84" y="334"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="50"
+    font-weight="300"
+    fill="#1a2d4a"
+    letter-spacing="-0.5">problema de</text>
+
+  <text x="84" y="396"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="50"
+    font-style="italic"
+    font-weight="400"
+    fill="#2e5d9e"
+    letter-spacing="-0.5">crescimento</text>
+
+  <text x="84" y="570"
+    font-family="'JetBrains Mono', monospace"
+    font-size="11"
+    fill="#1a2d4a"
+    letter-spacing="3"
+    opacity="0.5">CLEBSON CASTRO</text>
+
+</svg>

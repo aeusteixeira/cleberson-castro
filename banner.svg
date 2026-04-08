@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1584 396" width="1584" height="396">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&amp;family=JetBrains+Mono:wght@400&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background cream -->
+  <rect width="1584" height="396" fill="#f5f2ec"/>
+
+  <!-- Top accent line navy -->
+  <rect x="0" y="0" width="1584" height="3" fill="#1a2d4a"/>
+
+  <!-- Bottom accent line blue -->
+  <rect x="0" y="393" width="1584" height="3" fill="#2e5d9e"/>
+
+  <!-- Vertical accent bar -->
+  <rect x="460" y="60" width="2" height="276" fill="#2e5d9e" opacity="0.35"/>
+
+  <!-- Label mono -->
+  <text
+    x="484"
+    y="92"
+    font-family="'JetBrains Mono', 'Courier New', monospace"
+    font-size="11"
+    font-weight="400"
+    fill="#2e5d9e"
+    letter-spacing="4"
+  >CLEBSON CASTRO</text>
+
+  <!-- Thin rule under label -->
+  <rect x="484" y="102" width="200" height="1" fill="#1a2d4a" opacity="0.15"/>
+
+  <!-- Main phrase line 1 -->
+  <text
+    x="484"
+    y="208"
+    font-family="'Cormorant Garamond', 'Georgia', serif"
+    font-size="64"
+    font-weight="300"
+    fill="#1a2d4a"
+  >Transformo operações</text>
+
+  <!-- Main phrase line 2 -->
+  <text
+    x="484"
+    y="296"
+    font-family="'Cormorant Garamond', 'Georgia', serif"
+    font-size="64"
+    font-weight="300"
+    fill="#1a2d4a"
+  >comerciais em <tspan font-weight="400" fill="#2e5d9e">estruturas que crescem.</tspan></text>
+
+</svg>

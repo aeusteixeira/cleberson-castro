@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f5f2ec"/>
+
+  <!-- Top line -->
+  <rect x="0" y="0" width="1200" height="3" fill="#1a2d4a"/>
+  <!-- Bottom line -->
+  <rect x="0" y="627" width="1200" height="3" fill="#2e5d9e"/>
+
+  <!-- Left vertical bar -->
+  <rect x="60" y="60" width="2" height="510" fill="#2e5d9e" opacity="0.35"/>
+
+  <!-- ======= NETWORK ILLUSTRATION (right side) ======= -->
+
+  <!-- Connection lines (drawn before nodes) -->
+  <g stroke="#1a2d4a" stroke-width="1" fill="none" opacity="0.12">
+    <line x1="758" y1="178" x2="878" y2="128"/>
+    <line x1="758" y1="178" x2="838" y2="318"/>
+    <line x1="878" y1="128" x2="958" y2="238"/>
+    <line x1="878" y1="128" x2="1048" y2="168"/>
+    <line x1="958" y1="238" x2="838" y2="318"/>
+    <line x1="958" y1="238" x2="1048" y2="168"/>
+    <line x1="1048" y1="168" x2="1098" y2="308"/>
+    <line x1="838" y1="318" x2="978" y2="388"/>
+    <line x1="1098" y1="308" x2="1078" y2="428"/>
+    <line x1="978" y1="388" x2="1078" y2="428"/>
+    <line x1="718" y1="378" x2="838" y2="318"/>
+    <line x1="718" y1="378" x2="898" y2="478"/>
+    <line x1="978" y1="388" x2="898" y2="478"/>
+    <line x1="758" y1="178" x2="718" y2="378"/>
+  </g>
+
+  <!-- Nodes -->
+  <!-- Large node -->
+  <circle cx="958" cy="238" r="26" fill="#f5f2ec" stroke="#1a2d4a" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="958" cy="238" r="8" fill="#1a2d4a" opacity="0.7"/>
+
+  <!-- Medium nodes filled navy -->
+  <circle cx="758" cy="178" r="18" fill="#1a2d4a" opacity="0.75"/>
+  <circle cx="1098" cy="308" r="18" fill="#1a2d4a" opacity="0.6"/>
+
+  <!-- Medium nodes filled blue -->
+  <circle cx="1048" cy="168" r="14" fill="#2e5d9e" opacity="0.7"/>
+  <circle cx="978" cy="388" r="20" fill="#f5f2ec" stroke="#2e5d9e" stroke-width="1.5"/>
+  <circle cx="978" cy="388" r="6" fill="#2e5d9e"/>
+
+  <!-- Small nodes -->
+  <circle cx="878" cy="128" r="10" fill="#2e5d9e" opacity="0.5"/>
+  <circle cx="838" cy="318" r="12" fill="#1a2d4a" opacity="0.4"/>
+  <circle cx="1078" cy="428" r="8" fill="#1a2d4a" opacity="0.35"/>
+  <circle cx="718" cy="378" r="6" fill="#2e5d9e" opacity="0.4"/>
+  <circle cx="898" cy="478" r="10" fill="#2e5d9e" opacity="0.3"/>
+
+  <!-- Pulse rings on main node -->
+  <circle cx="958" cy="238" r="42" fill="none" stroke="#2e5d9e" stroke-width="0.8" opacity="0.15"/>
+  <circle cx="958" cy="238" r="60" fill="none" stroke="#2e5d9e" stroke-width="0.5" opacity="0.08"/>
+
+  <!-- ======= TEXT (left side) ======= -->
+
+  <!-- Category label -->
+  <text x="84" y="108"
+    font-family="'JetBrains Mono', monospace"
+    font-size="11"
+    fill="#2e5d9e"
+    letter-spacing="4">FRANCHISING</text>
+
+  <!-- Rule under label -->
+  <rect x="84" y="118" width="160" height="1" fill="#1a2d4a" opacity="0.15"/>
+
+  <!-- Title line 1 -->
+  <text x="84" y="206"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="52"
+    font-weight="300"
+    fill="#1a2d4a"
+    letter-spacing="-0.5">O erro que vi repetir</text>
+
+  <!-- Title line 2 -->
+  <text x="84" y="272"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="52"
+    font-weight="300"
+    fill="#1a2d4a"
+    letter-spacing="-0.5">em quase todo</text>
+
+  <!-- Title line 3 italic highlight -->
+  <text x="84" y="338"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="52"
+    font-weight="300"
+    fill="#1a2d4a"
+    letter-spacing="-0.5">negócio que tentou</text>
+
+  <!-- Title line 4 -->
+  <text x="84" y="404"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="52"
+    font-style="italic"
+    font-weight="400"
+    fill="#2e5d9e"
+    letter-spacing="-0.5">franquear</text>
+
+  <!-- Author -->
+  <text x="84" y="570"
+    font-family="'JetBrains Mono', monospace"
+    font-size="11"
+    fill="#1a2d4a"
+    letter-spacing="3"
+    opacity="0.5">CLEBSON CASTRO</text>
+
+</svg>

@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f5f2ec"/>
+
+  <!-- Top accent line navy -->
+  <rect x="0" y="0" width="1200" height="3" fill="#1a2d4a"/>
+  <!-- Bottom accent line blue -->
+  <rect x="0" y="627" width="1200" height="3" fill="#2e5d9e"/>
+
+  <!-- Left vertical bar -->
+  <rect x="60" y="60" width="2" height="510" fill="#2e5d9e" opacity="0.35"/>
+
+  <!-- ======= CC MONOGRAM (right side, decorative) ======= -->
+
+  <!-- Outer ring -->
+  <circle cx="880" cy="315" r="240" fill="none" stroke="#1a2d4a" stroke-width="0.8" opacity="0.07"/>
+  <!-- Inner ring -->
+  <circle cx="880" cy="315" r="190" fill="none" stroke="#2e5d9e" stroke-width="0.5" opacity="0.1"/>
+  <!-- Very inner ring -->
+  <circle cx="880" cy="315" r="135" fill="none" stroke="#1a2d4a" stroke-width="0.5" opacity="0.06"/>
+
+  <!-- CC monogram — large, watermark -->
+  <text
+    x="880"
+    y="400"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="340"
+    font-weight="300"
+    font-style="italic"
+    fill="#1a2d4a"
+    text-anchor="middle"
+    opacity="0.055"
+    letter-spacing="-12">CC</text>
+
+  <!-- Subtle arc accent top right -->
+  <path d="M 1050 100 A 220 220 0 0 1 1150 280" fill="none" stroke="#2e5d9e" stroke-width="1" opacity="0.12"/>
+  <!-- Subtle arc accent bottom left of monogram zone -->
+  <path d="M 650 420 A 160 160 0 0 0 720 540" fill="none" stroke="#1a2d4a" stroke-width="0.8" opacity="0.08"/>
+
+  <!-- Thin vertical rule separating zones -->
+  <line x1="620" y1="80" x2="620" y2="550" stroke="#1a2d4a" stroke-width="0.5" opacity="0.08"/>
+
+  <!-- ======= TEXT (left side) ======= -->
+
+  <!-- Label -->
+  <text x="84" y="108"
+    font-family="'JetBrains Mono', monospace"
+    font-size="10"
+    fill="#2e5d9e"
+    letter-spacing="4">EXECUTIVO COMERCIAL &amp; CONSULTOR</text>
+
+  <!-- Rule under label -->
+  <rect x="84" y="118" width="300" height="1" fill="#1a2d4a" opacity="0.15"/>
+
+  <!-- Name line 1 -->
+  <text x="84" y="240"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="96"
+    font-weight="300"
+    fill="#1a2d4a"
+    letter-spacing="-2">Clebson</text>
+
+  <!-- Name line 2 italic blue -->
+  <text x="84" y="344"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="96"
+    font-style="italic"
+    font-weight="300"
+    fill="#2e5d9e"
+    letter-spacing="-2">Castro</text>
+
+  <!-- Role -->
+  <text x="84" y="418"
+    font-family="'JetBrains Mono', monospace"
+    font-size="11"
+    fill="#1a2d4a"
+    letter-spacing="1"
+    opacity="0.55">Franchising · B2B · Growth · IA aplicada</text>
+
+  <!-- Thin rule before brands -->
+  <rect x="84" y="448" width="460" height="1" fill="#1a2d4a" opacity="0.1"/>
+
+  <!-- Brands row -->
+  <text x="84" y="474"
+    font-family="'JetBrains Mono', monospace"
+    font-size="10"
+    fill="#1a2d4a"
+    letter-spacing="2"
+    opacity="0.35">Unilever · Coca-Cola · Citi · Unimed</text>
+
+  <!-- Bottom author stamp -->
+  <text x="84" y="570"
+    font-family="'JetBrains Mono', monospace"
+    font-size="10"
+    fill="#2e5d9e"
+    letter-spacing="3"
+    opacity="0.45">clebsoncastro.com.br</text>
+
+</svg>
