@@ -1511,8 +1511,8 @@ button {
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 998;
-    background: var(--color-cream);
+    z-index: 1002;
+    background-color: var(--color-cream);
     flex-direction: column;
     justify-content: center;
     align-items: center;
