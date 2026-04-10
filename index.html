@@ -46,7 +46,9 @@
     rel="stylesheet">
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="images/cleberson.jpeg">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/uau.css">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -117,6 +119,12 @@
 
 <body>
 
+  <!-- Cursor magnético -->
+  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
   <!-- ===== NAV ===== -->
   <nav class="nav" aria-label="Navegação principal">
     <div class="container">
@@ -132,6 +140,9 @@
         <a href="#cases" class="nav__link">Cases</a>
         <a href="#trajetoria" class="nav__link">Trajetória</a>
         <a href="#contato" class="nav__link">Contato</a>
+        <button class="nav__close" aria-label="Fechar menu">
+          <span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
@@ -150,28 +161,12 @@
           <span class="hero__name-overlap" aria-hidden="true">Castro</span>
         </h1>
 
-        <p class="hero__role">Executivo Comercial, Consultor de Expansão e Growth</p>
-        <p class="hero__tagline">Franchising, estruturação comercial, IA aplicada a vendas, ChatGPT, tráfego pago e
-          Google Ads.</p>
+        <p class="hero__role">Eu entro na sua operação e faço o número acontecer.</p>
+        <p class="hero__tagline">Franchising · Expansão B2B · IA aplicada a vendas</p>
 
         <div class="hero__ctas">
-          <!-- SUBSTITUIR: href com o número do WhatsApp real -->
-          <a href="https://wa.me/5511945125351" target="_blank" rel="noopener" class="btn btn--primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Falar sobre consultoria
-          </a>
-          <a href="#trajetoria" class="btn btn--outline">Ver trajetória</a>
-          <!-- SUBSTITUIR: href com o link do LinkedIn real -->
-          <a href="https://linkedin.com/in/clebsoncastro" target="_blank" rel="noopener" class="btn btn--ghost">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
-              <rect x="2" y="9" width="4" height="12" />
-              <circle cx="4" cy="4" r="2" />
-            </svg>
-            LinkedIn
+          <a href="https://wa.me/5511945125351?text=Ol%C3%A1%20Clebson%2C%20vim%20pelo%20seu%20site%20e%20quero%20fazer%20um%20diagn%C3%B3stico%20da%20minha%20opera%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn btn--primary">
+            Diagnóstico gratuito
           </a>
         </div>
 
@@ -191,6 +186,10 @@
           class="hero__image" width="800" height="1000">
         <div class="hero__accent-line" aria-hidden="true"></div>
       </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <div class="hero__scroll-line"></div>
+      </div>
     </section>
 
     <!-- ===== STATS BAR ===== -->
@@ -202,19 +201,48 @@
           <div class="stat__detail">em grandes operações</div>
         </div>
         <div class="stat reveal">
-          <div class="stat__value" data-counter="4">0</div>
-          <div class="stat__label">Grandes marcas</div>
-          <div class="stat__detail">multinacionais & líderes</div>
+          <div class="stat__value">R$50M<span style="font-size:0.55em;vertical-align:super">+</span></div>
+          <div class="stat__label">Em expansão estruturada</div>
+          <div class="stat__detail">valor gerado para clientes</div>
         </div>
         <div class="stat reveal">
-          <div class="stat__value">B2B</div>
-          <div class="stat__label">Foco principal</div>
-          <div class="stat__detail">vendas complexas</div>
+          <div class="stat__value" data-counter="99" data-suffix="">0</div>
+          <div class="stat__label">Unidades estruturadas</div>
+          <div class="stat__detail">maior expansão de franquia</div>
         </div>
         <div class="stat reveal">
-          <div class="stat__value">360°</div>
-          <div class="stat__label">Visão de dono</div>
-          <div class="stat__detail">estratégia + execução</div>
+          <div class="stat__value">30d</div>
+          <div class="stat__label">Diagnóstico a resultado</div>
+          <div class="stat__detail">positivação 13% → 47%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MANIFESTO ===== -->
+    <section class="manifesto" aria-label="Frase">
+      <div class="container">
+        <blockquote class="manifesto__quote reveal">
+          <p>"A diferença entre um plano bonito e um resultado real tem um nome: execução. É nessa fronteira que eu trabalho."</p>
+          <cite>— Clebson Castro</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ===== CARTA AO CEO ===== -->
+    <section class="ceo-letter" aria-label="Para o CEO">
+      <div class="container">
+        <div class="ceo-letter__inner">
+          <div class="ceo-letter__tag reveal">
+            <span class="label">Para você, CEO</span>
+          </div>
+          <div class="ceo-letter__body">
+            <p class="ceo-letter__line reveal">Se o seu time não bate meta há mais de dois meses, cada semana que passa tem um custo. Não de consultoria — de receita que não veio.</p>
+            <p class="ceo-letter__line reveal">Eu não faço slide bonito. Entro na operação, identifico o gargalo em dias e executo junto com o time até o número aparecer no caixa.</p>
+            <p class="ceo-letter__line reveal">Se você tem um canal de venda que depende de meia dúzia de pessoas-chave, um plano de expansão que não sai do PowerPoint ou um time que não tem clareza do que fazer — esses são os problemas que eu resolvo. Sempre.</p>
+          </div>
+          <a href="https://wa.me/5511945125351?text=Ol%C3%A1%20Clebson%2C%20quero%20fazer%20o%20diagn%C3%B3stico%20da%20minha%20opera%C3%A7%C3%A3o%20comercial." target="_blank" rel="noopener" class="btn btn--primary ceo-letter__cta reveal">
+            Quero o diagnóstico gratuito
+          </a>
         </div>
       </div>
     </section>
@@ -255,6 +283,21 @@
             </p>
           </div>
 
+          <div class="about__achievements reveal">
+            <div class="about__achievement">
+              <span class="about__achievement-num">15+</span>
+              <span class="about__achievement-label">Anos de mercado</span>
+            </div>
+            <div class="about__achievement">
+              <span class="about__achievement-num">4</span>
+              <span class="about__achievement-label">Grandes marcas</span>
+            </div>
+            <div class="about__achievement">
+              <span class="about__achievement-num">360°</span>
+              <span class="about__achievement-label">Visão comercial</span>
+            </div>
+          </div>
+
           <div class="about__signature reveal">Clebson</div>
         </div>
 
@@ -280,19 +323,51 @@
             vendas.
           </p>
         </div>
-        <div class="competencies__pills reveal" data-stagger>
-          <span class="pill reveal">IA aplicada a vendas</span>
-          <span class="pill reveal">ChatGPT</span>
-          <span class="pill reveal">Automação comercial</span>
-          <span class="pill reveal">Tráfego pago</span>
-          <span class="pill reveal">Google Ads</span>
-          <span class="pill reveal">Funis de aquisição</span>
-          <span class="pill reveal">Conversão</span>
-          <span class="pill reveal">Geração de demanda</span>
-          <span class="pill reveal">Franchising</span>
-          <span class="pill reveal">Estruturação comercial</span>
-          <span class="pill reveal">B2B</span>
-          <span class="pill reveal">Growth</span>
+        <div class="marquee-wrapper">
+          <!-- Faixa 1: esquerda para direita -->
+          <div class="marquee-track marquee-track--fwd" aria-hidden="true">
+            <div class="marquee-inner">
+              <span class="marquee-item">IA aplicada a vendas</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">ChatGPT</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Automação comercial</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Tráfego pago</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Google Ads</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Funis de aquisição</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Franchising</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Expansão B2B</span><span class="marquee-sep">·</span>
+              <!-- duplicar para loop suave -->
+              <span class="marquee-item">IA aplicada a vendas</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">ChatGPT</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Automação comercial</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Tráfego pago</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Google Ads</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Funis de aquisição</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Franchising</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Expansão B2B</span><span class="marquee-sep">·</span>
+            </div>
+          </div>
+          <!-- Faixa 2: direita para esquerda -->
+          <div class="marquee-track marquee-track--rev" aria-hidden="true">
+            <div class="marquee-inner">
+              <span class="marquee-item">Growth</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Reestruturação comercial</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Geração de demanda</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Conversão</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Diagnóstico</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Execução</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Resultado</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Estruturação comercial</span><span class="marquee-sep">·</span>
+              <!-- duplicar -->
+              <span class="marquee-item">Growth</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Reestruturação comercial</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Geração de demanda</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Conversão</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Diagnóstico</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Execução</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Resultado</span><span class="marquee-sep">·</span>
+              <span class="marquee-item">Estruturação comercial</span><span class="marquee-sep">·</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -342,6 +417,49 @@
       </div>
     </section>
 
+    <!-- ===== METODOLOGIA ===== -->
+    <section class="methodology" aria-label="Metodologia de trabalho">
+      <div class="container">
+        <div class="methodology__header">
+          <span class="label reveal">Processo</span>
+          <h2 class="heading-lg reveal">Como eu <em>trabalho</em></h2>
+        </div>
+        <div class="methodology__flow" data-stagger>
+          <div class="methodology__step reveal">
+            <span class="methodology__step-num">01</span>
+            <div class="methodology__step-body">
+              <h3 class="methodology__step-title">Diagnosticar</h3>
+              <p class="methodology__step-desc">Leitura profunda do negócio antes de qualquer proposta. Sem diagnóstico real, qualquer plano é chute.</p>
+            </div>
+          </div>
+          <div class="methodology__arrow reveal" aria-hidden="true">
+            <svg width="40" height="14" viewBox="0 0 40 14" fill="none">
+              <path d="M0 7h34M28 2l7 5-7 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="methodology__step reveal">
+            <span class="methodology__step-num">02</span>
+            <div class="methodology__step-body">
+              <h3 class="methodology__step-title">Executar</h3>
+              <p class="methodology__step-desc">Presença na operação. Não deixo o plano no papel esperando o cliente implementar sozinho.</p>
+            </div>
+          </div>
+          <div class="methodology__arrow reveal" aria-hidden="true">
+            <svg width="40" height="14" viewBox="0 0 40 14" fill="none">
+              <path d="M0 7h34M28 2l7 5-7 5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="methodology__step reveal">
+            <span class="methodology__step-num">03</span>
+            <div class="methodology__step-body">
+              <h3 class="methodology__step-title">Medir</h3>
+              <p class="methodology__step-desc">Resultado não é sensação. É número. Definimos métricas no início e acompanhamos até o caixa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ===== CASES ===== -->
     <section class="cases" id="cases" aria-label="Cases">
       <div class="container">
@@ -353,8 +471,12 @@
         <div class="cases__grid" data-stagger>
 
           <!-- Case real -->
-          <div class="cases__card reveal">
+          <div class="cases__card reveal" data-case="01">
             <span class="cases__card-tag">Plano de Saúde · Canal Direto</span>
+            <div class="cases__card-metric">
+              <span class="cases__metric-number">Zero → Operando</span>
+              <span class="cases__metric-label">Canal escalável</span>
+            </div>
             <h3 class="cases__card-title">Unimed: Canal de Venda Direta</h3>
             <dl class="cases__flow">
               <dt>Problema</dt>
@@ -367,9 +489,31 @@
             </dl>
           </div>
 
+          <!-- Unimed: Planos Individuais -->
+          <div class="cases__card reveal" data-case="02">
+            <span class="cases__card-tag">Plano de Saúde · Governança Comercial</span>
+            <div class="cases__card-metric">
+              <span class="cases__metric-number">Sem KPIs → Gestão estruturada</span>
+              <span class="cases__metric-label">Planos Individuais</span>
+            </div>
+            <h3 class="cases__card-title">Unimed: Reestruturação Comercial e Governança</h3>
+            <dl class="cases__flow">
+              <dt>Problema</dt>
+              <dd>Operação limitada por rotinas frágeis, ausência de KPIs e acompanhamento comercial sem direção — especialmente no B2B — comprometendo leitura de performance e tomada de decisão.</dd>
+              <dt>Ação</dt>
+              <dd>Reposicionei a equipe, construí lógica de gestão com disciplina comercial e KPIs claros. Conduzi projetos validados pela diretoria em formato de plano piloto e atuei sobre frentes terceirizadas, ampliando a coerência da operação.</dd>
+              <dt>Resultado</dt>
+              <dd>Gestão mais madura e orientada por resultado. A própria diretoria iniciou reconhecimento financeiro — sinalização concreta de que a atuação migrou de suporte operacional para contribuição estratégica ao negócio.</dd>
+            </dl>
+          </div>
+
           <!-- Coco Bambu -->
-          <div class="cases__card reveal">
+          <div class="cases__card reveal" data-case="03">
             <span class="cases__card-tag">Franchising · Expansão Estratégica</span>
+            <div class="cases__card-metric">
+              <span class="cases__metric-number">3 → 99</span>
+              <span class="cases__metric-label">Unidades</span>
+            </div>
             <h3 class="cases__card-title">Coco Bambu: Estruturação do Modelo de Franchising</h3>
             <dl class="cases__flow">
               <dt>Problema</dt>
@@ -386,8 +530,12 @@
           </div>
 
           <!-- Sagian -->
-          <div class="cases__card reveal">
+          <div class="cases__card reveal" data-case="04">
             <span class="cases__card-tag">B2B · Operação Digital</span>
+            <div class="cases__card-metric">
+              <span class="cases__metric-number">13% → 47%</span>
+              <span class="cases__metric-label">Positivação em 30 dias</span>
+            </div>
             <h3 class="cases__card-title">Sagian: Virada da Operação B2B</h3>
             <dl class="cases__flow">
               <dt>Problema</dt>
@@ -400,8 +548,12 @@
           </div>
 
           <!-- Gracom -->
-          <div class="cases__card reveal">
+          <div class="cases__card reveal" data-case="05">
             <span class="cases__card-tag">Franchising · Expansão Nacional</span>
+            <div class="cases__card-metric">
+              <span class="cases__metric-number">1 → 7</span>
+              <span class="cases__metric-label">Unidades pelo Brasil</span>
+            </div>
             <h3 class="cases__card-title">Gracom: De Escola Local a Rede Nacional</h3>
             <dl class="cases__flow">
               <dt>Problema</dt>
@@ -428,24 +580,39 @@
         <div class="insights__grid" data-stagger>
 
           <article class="insights__card reveal">
-            <span class="insights__card-theme">Franchising</span>
-            <h3 class="insights__card-title">O erro que vi repetir em quase todo negócio que tentou franquear</h3>
-            <p class="insights__card-desc">Franquear parece simples até você tentar. O problema quase nunca é o modelo de negócio. É a operação que depende do dono para funcionar.</p>
-            <a href="artigo-franchising.html" class="insights__card-link">Ler mais &rarr;</a>
+            <a href="artigo-franchising.html" class="insights__card-img-wrap">
+              <img src="images/capa-franchising.png" alt="Franchising" class="insights__card-img" loading="lazy">
+            </a>
+            <div class="insights__card-body">
+              <span class="insights__card-theme">Franchising</span>
+              <h3 class="insights__card-title">O erro que vi repetir em quase todo negócio que tentou franquear</h3>
+              <p class="insights__card-desc">Franquear parece simples até você tentar. O problema quase nunca é o modelo de negócio. É a operação que depende do dono para funcionar.</p>
+              <a href="artigo-franchising.html" class="insights__card-link">Ler mais &rarr;</a>
+            </div>
           </article>
 
           <article class="insights__card reveal">
-            <span class="insights__card-theme">IA & Vendas</span>
-            <h3 class="insights__card-title">IA no comercial: o que funciona de verdade</h3>
-            <p class="insights__card-desc">Todo mundo está falando sobre IA em vendas. Poucos estão usando de verdade. Aqui está o que eu aplico no dia a dia, sem hype e sem enrolação.</p>
-            <a href="artigo-ia-vendas.html" class="insights__card-link">Ler mais &rarr;</a>
+            <a href="artigo-ia-vendas.html" class="insights__card-img-wrap">
+              <img src="images/capa-ia-vendas.png" alt="IA e Vendas" class="insights__card-img" loading="lazy">
+            </a>
+            <div class="insights__card-body">
+              <span class="insights__card-theme">IA & Vendas</span>
+              <h3 class="insights__card-title">IA no comercial: o que funciona de verdade</h3>
+              <p class="insights__card-desc">Todo mundo está falando sobre IA em vendas. Poucos estão usando de verdade. Aqui está o que eu aplico no dia a dia, sem hype e sem enrolação.</p>
+              <a href="artigo-ia-vendas.html" class="insights__card-link">Ler mais &rarr;</a>
+            </div>
           </article>
 
           <article class="insights__card reveal">
-            <span class="insights__card-theme">Growth</span>
-            <h3 class="insights__card-title">A maioria das empresas não tem problema de crescimento</h3>
-            <p class="insights__card-desc">Crescer não é sinônimo de conquistar novos clientes. O maior potencial de receita quase sempre está dentro da carteira que você já tem e não está ativando.</p>
-            <a href="artigo-growth.html" class="insights__card-link">Ler mais &rarr;</a>
+            <a href="artigo-growth.html" class="insights__card-img-wrap">
+              <img src="images/capa-growth.png" alt="Growth" class="insights__card-img" loading="lazy">
+            </a>
+            <div class="insights__card-body">
+              <span class="insights__card-theme">Growth</span>
+              <h3 class="insights__card-title">A maioria das empresas não tem problema de crescimento</h3>
+              <p class="insights__card-desc">Crescer não é sinônimo de conquistar novos clientes. O maior potencial de receita quase sempre está dentro da carteira que você já tem e não está ativando.</p>
+              <a href="artigo-growth.html" class="insights__card-link">Ler mais &rarr;</a>
+            </div>
           </article>
 
         </div>
@@ -500,72 +667,203 @@
       </div>
     </section>
 
-    <!-- ===== CONTATO ===== -->
-    <section class="contact" id="contato" aria-label="Entre em contato">
+    <!-- ===== DEPOIMENTOS ===== -->
+    <section class="testimonials" aria-label="Depoimentos">
       <div class="container">
-        <span class="label reveal">Contato</span>
-        <h2 class="contact__heading reveal">Dois caminhos.<br>Uma <em>conversa</em>.</h2>
-        <p class="contact__sub reveal">Atendo tanto empresas que precisam de consultoria quanto headhunters com posições
-          executivas.</p>
+        <div class="testimonials__header">
+          <span class="label reveal">Depoimentos</span>
+          <h2 class="heading-lg reveal">O que dizem <em>sobre o trabalho</em></h2>
+        </div>
+        <div class="testimonials__grid" data-stagger>
 
-        <div class="contact__doors reveal">
-          <!-- SUBSTITUIR: href com o número do WhatsApp real -->
-          <a href="https://wa.me/5511945125351" target="_blank" rel="noopener" class="btn--door btn--door--primary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Contratar consultoria
-            <small>via WhatsApp</small>
-          </a>
-          <!-- SUBSTITUIR: href com o link do LinkedIn real -->
-          <a href="https://linkedin.com/in/clebsoncastro" target="_blank" rel="noopener"
-            class="btn--door btn--door--secondary">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
-              <rect x="2" y="9" width="4" height="12" />
-              <circle cx="4" cy="4" r="2" />
-            </svg>
-            Conversar sobre posição executiva
-            <small>via LinkedIn ou e-mail</small>
-          </a>
+          <blockquote class="testimonial reveal">
+            <div class="testimonial__body">
+              <p>"Um excelente profissional, me auxiliou no processo de organização e estruturação de algumas áreas e projetos. Competente, disciplinado e organizado!"</p>
+            </div>
+            <footer class="testimonial__footer">
+              <div>
+                <cite class="testimonial__name">Olindo Caverzan Junior</cite>
+                <span class="testimonial__role">CEO · Diretor Geral</span>
+              </div>
+              <a href="https://linkedin.com/in/clebsoncastro" target="_blank" rel="noopener" class="testimonial__badge" aria-label="Verificado no LinkedIn">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                LinkedIn
+              </a>
+            </footer>
+          </blockquote>
+
+          <blockquote class="testimonial reveal">
+            <div class="testimonial__body">
+              <p>"Clebson tem excelentes competências na área de Marketing Estratégico e na área comercial. Nos últimos anos desenvolveu suas habilidades no segmento de franchising ajudando empresas no seu projeto de expansão."</p>
+            </div>
+            <footer class="testimonial__footer">
+              <div>
+                <cite class="testimonial__name">Ricardo Aderaldo Pinheiro</cite>
+                <span class="testimonial__role">CEO do Mapa do Talento · Coach & Mentor</span>
+              </div>
+              <a href="https://linkedin.com/in/clebsoncastro" target="_blank" rel="noopener" class="testimonial__badge" aria-label="Verificado no LinkedIn">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                LinkedIn
+              </a>
+            </footer>
+          </blockquote>
+
         </div>
       </div>
     </section>
 
+    <!-- ===== CONTATO ===== -->
+    <section class="contact" id="contato" aria-label="Entre em contato">
+
+      <!-- Barra superior: label + urgência -->
+      <div class="contact__topbar">
+        <div class="container contact__topbar-inner">
+          <span class="contact__topbar-label">Contato</span>
+          <span class="contact__topbar-urgency">
+            <span class="contact__urgency-dot" aria-hidden="true"></span>
+            Agenda Q2 2025 — <strong>1 vaga disponível</strong>
+          </span>
+        </div>
+      </div>
+
+      <!-- Corpo principal: heading + ação -->
+      <div class="container">
+        <div class="contact__main">
+
+          <div class="contact__statement reveal">
+            <h2 class="contact__heading">Se encaixa<br>no seu<br><em>problema?</em></h2>
+          </div>
+
+          <div class="contact__action reveal">
+            <p class="contact__sub">Consultorias ativas têm atenção total. Por isso o acesso é limitado. Se faz sentido conversar, o momento é agora.</p>
+            <div class="contact__ctas">
+              <a href="https://wa.me/5511945125351?text=Ol%C3%A1%20Clebson%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" class="contact__cta-primary">
+                Contratar consultoria
+                <span>via WhatsApp ↗</span>
+              </a>
+              <a href="https://linkedin.com/in/clebsoncastro" target="_blank" rel="noopener" class="contact__cta-secondary">
+                Posição executiva
+                <span>LinkedIn ↗</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Faixa de evidências -->
+      <div class="contact__evidence">
+        <div class="container contact__evidence-inner">
+          <div class="contact__evidence-item">
+            <span class="contact__evidence-num">3 → 99</span>
+            <span class="contact__evidence-label">Unidades · Coco Bambu</span>
+          </div>
+          <div class="contact__evidence-item">
+            <span class="contact__evidence-num">13% → 47%</span>
+            <span class="contact__evidence-label">Positivação · Sagian</span>
+          </div>
+          <div class="contact__evidence-item">
+            <span class="contact__evidence-num">Zero → op.</span>
+            <span class="contact__evidence-label">Canal direto · Unimed</span>
+          </div>
+          <div class="contact__evidence-item">
+            <span class="contact__evidence-num">1 → 7</span>
+            <span class="contact__evidence-label">Unidades · Gracom</span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
   </main>
+
+  <a href="https://wa.me/5511945125351?text=Ol%C3%A1%20Clebson%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Falar no WhatsApp">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
-    <div class="container">
-      <span class="footer__copy">&copy; 2025 Clebson Castro. Todos os direitos reservados.</span>
-      <div class="footer__links">
-        <!-- SUBSTITUIR: hrefs reais -->
-        <a href="mailto:contato@clebsoncastro.com.br" class="footer__icon" aria-label="E-mail">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <rect x="2" y="4" width="20" height="16" rx="2" />
-            <path d="m2 4 10 8 10-8" />
-          </svg>
-        </a>
-        <a href="https://linkedin.com/in/clebsoncastro" target="_blank" rel="noopener" class="footer__icon"
-          aria-label="LinkedIn">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z" />
-            <rect x="2" y="9" width="4" height="12" />
-            <circle cx="4" cy="4" r="2" />
-          </svg>
-        </a>
-        <a href="https://wa.me/5511945125351" target="_blank" rel="noopener" class="footer__icon" aria-label="WhatsApp">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
-            <path
-              d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-          </svg>
-        </a>
+
+    <!-- Área editorial -->
+    <div class="footer__top">
+      <div class="container">
+        <div class="footer__grid">
+
+          <!-- Identidade -->
+          <div class="footer__col footer__col--brand">
+            <div class="footer__brand-mono" aria-hidden="true">CC</div>
+            <p class="footer__brand-name">Clebson Castro</p>
+            <p class="footer__brand-tagline">Estratégia que<br>vira resultado.</p>
+            <div class="footer__social">
+              <a href="https://linkedin.com/in/clebsoncastro" target="_blank" rel="noopener" class="footer__social-link" aria-label="LinkedIn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/>
+                  <rect x="2" y="9" width="4" height="12"/>
+                  <circle cx="4" cy="4" r="2"/>
+                </svg>
+              </a>
+              <a href="https://wa.me/5511945125351?text=Ol%C3%A1%20Clebson%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" class="footer__social-link" aria-label="WhatsApp">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+              </a>
+              <a href="mailto:contato@clebsoncastro.com.br" class="footer__social-link" aria-label="E-mail">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <path d="m2 4 10 8 10-8"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navegação -->
+          <div class="footer__col">
+            <span class="footer__col-label">Navegação</span>
+            <nav class="footer__nav" aria-label="Links do rodapé">
+              <a href="#sobre" class="footer__nav-link">Sobre</a>
+              <a href="#expertise" class="footer__nav-link">Expertise</a>
+              <a href="#cases" class="footer__nav-link">Cases</a>
+              <a href="#trajetoria" class="footer__nav-link">Trajetória</a>
+              <a href="#contato" class="footer__nav-link">Contato</a>
+            </nav>
+          </div>
+
+          <!-- Contato direto -->
+          <div class="footer__col">
+            <span class="footer__col-label">Fale agora</span>
+            <div class="footer__channels">
+              <a href="https://wa.me/5511945125351?text=Ol%C3%A1%20Clebson%2C%20vim%20pelo%20seu%20site%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener" class="footer__channel">
+                <span class="footer__channel-icon">↗</span>
+                WhatsApp
+              </a>
+              <a href="https://linkedin.com/in/clebsoncastro" target="_blank" rel="noopener" class="footer__channel">
+                <span class="footer__channel-icon">↗</span>
+                LinkedIn
+              </a>
+              <a href="mailto:contato@clebsoncastro.com.br" class="footer__channel">
+                <span class="footer__channel-icon">↗</span>
+                E-mail
+              </a>
+            </div>
+            <p class="footer__availability">
+              <span class="footer__avail-dot" aria-hidden="true"></span>
+              Agenda Q2 2025 — 1 vaga
+            </p>
+          </div>
+
+        </div>
       </div>
-      <a href="#" class="footer__back">Voltar ao topo &uarr;</a>
-      <span class="footer__dev">feito com &hearts; por <a href="https://matheusteixeira.com.br/" target="_blank"
-          rel="noopener">Matheus Teixeira</a></span>
     </div>
+
+    <!-- Barra inferior -->
+    <div class="footer__bar">
+      <div class="container">
+        <span class="footer__copy">&copy; 2025 Clebson Castro</span>
+        <a href="#" class="footer__back" aria-label="Voltar ao topo">&#8593; Topo</a>
+        <span class="footer__dev">por <a href="https://matheusteixeira.com.br/" target="_blank" rel="noopener">Matheus Teixeira</a></span>
+      </div>
+    </div>
+
   </footer>
 
   <script src="js/main.js"></script>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página não encontrada | Clebson Castro</title>
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://clebsoncastro.com.br/">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Outfit:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+
+  <style>
+    .not-found {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-cream);
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .not-found__inner {
+      max-width: 520px;
+    }
+
+    .not-found__code {
+      font-family: var(--font-display);
+      font-size: clamp(6rem, 20vw, 10rem);
+      font-weight: 300;
+      line-height: 1;
+      color: var(--color-ink);
+      opacity: 0.08;
+      letter-spacing: -0.04em;
+      display: block;
+      margin-bottom: -1rem;
+    }
+
+    .not-found__label {
+      font-family: var(--font-mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      display: block;
+      margin-bottom: 1.5rem;
+    }
+
+    .not-found__title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      font-weight: 400;
+      color: var(--color-ink);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .not-found__title em {
+      font-style: italic;
+      color: var(--color-gold);
+    }
+
+    .not-found__desc {
+      font-family: var(--font-body);
+      font-size: 0.95rem;
+      color: var(--color-muted);
+      line-height: 1.7;
+      margin-bottom: 2.5rem;
+    }
+
+    .not-found__actions {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav class="nav" role="navigation" aria-label="Navegação principal">
+    <div class="container nav__inner">
+      <a href="index.html" class="nav__logo" aria-label="Clebson Castro — Página inicial">
+        <span class="nav__logo-name">Clebson. Castro</span>
+      </a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="not-found">
+      <div class="not-found__inner">
+        <span class="not-found__code">404</span>
+        <span class="not-found__label">Página não encontrada</span>
+        <h1 class="not-found__title">Este caminho não <em>existe</em>.</h1>
+        <p class="not-found__desc">O link pode ter mudado ou a página foi removida.<br>Mas a conversa pode começar por aqui.</p>
+        <div class="not-found__actions">
+          <a href="index.html" class="btn btn--primary">Voltar ao início</a>
+          <a href="index.html#contato" class="btn btn--outline">Falar com Clebson</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <span class="footer__copy">&copy; 2025 Clebson Castro. Todos os direitos reservados.</span>
+      <div class="footer__links">
+        <a href="mailto:contato@clebsoncastro.com.br" class="footer__icon" aria-label="E-mail">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 4 10 8 10-8"/></svg>
+        </a>
+        <a href="https://linkedin.com/in/clebsoncastro" target="_blank" rel="noopener" class="footer__icon" aria-label="LinkedIn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+      <span class="footer__dev">feito com &hearts; por <a href="https://matheusteixeira.com.br/" target="_blank" rel="noopener">Matheus Teixeira</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
