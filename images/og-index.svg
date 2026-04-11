@@ -1,105 +1,146 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1200 630" width="1200" height="630">
   <defs>
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=JetBrains+Mono:wght@400&amp;display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap');
     </style>
+
+    <clipPath id="photoClip">
+      <rect x="760" y="70" width="360" height="490" rx="4" ry="4"/>
+    </clipPath>
+
+    <linearGradient id="photoOverlay" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2d4a" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#1a2d4a" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#1a2d4a" stop-opacity="0.35"/>
+    </linearGradient>
   </defs>
 
-  <!-- Background -->
+  <!-- Background editorial -->
   <rect width="1200" height="630" fill="#f5f2ec"/>
 
-  <!-- Top accent line navy -->
+  <!-- Top & bottom accent lines -->
   <rect x="0" y="0" width="1200" height="3" fill="#1a2d4a"/>
-  <!-- Bottom accent line blue -->
   <rect x="0" y="627" width="1200" height="3" fill="#2e5d9e"/>
 
-  <!-- Left vertical bar -->
-  <rect x="60" y="60" width="2" height="510" fill="#2e5d9e" opacity="0.35"/>
+  <!-- Decorative rings (watermark) -->
+  <circle cx="930" cy="315" r="280" fill="none" stroke="#1a2d4a" stroke-width="0.8" opacity="0.06"/>
+  <circle cx="930" cy="315" r="220" fill="none" stroke="#2e5d9e" stroke-width="0.5" opacity="0.08"/>
+  <circle cx="930" cy="315" r="160" fill="none" stroke="#1a2d4a" stroke-width="0.5" opacity="0.05"/>
 
-  <!-- ======= CC MONOGRAM (right side, decorative) ======= -->
-
-  <!-- Outer ring -->
-  <circle cx="880" cy="315" r="240" fill="none" stroke="#1a2d4a" stroke-width="0.8" opacity="0.07"/>
-  <!-- Inner ring -->
-  <circle cx="880" cy="315" r="190" fill="none" stroke="#2e5d9e" stroke-width="0.5" opacity="0.1"/>
-  <!-- Very inner ring -->
-  <circle cx="880" cy="315" r="135" fill="none" stroke="#1a2d4a" stroke-width="0.5" opacity="0.06"/>
-
-  <!-- CC monogram — large, watermark -->
+  <!-- Large CC monogram watermark -->
   <text
-    x="880"
-    y="400"
+    x="600" y="470"
     font-family="'Cormorant Garamond', Georgia, serif"
-    font-size="340"
+    font-size="380"
     font-weight="300"
     font-style="italic"
     fill="#1a2d4a"
     text-anchor="middle"
-    opacity="0.055"
-    letter-spacing="-12">CC</text>
+    opacity="0.04"
+    letter-spacing="-14">CC</text>
 
-  <!-- Subtle arc accent top right -->
-  <path d="M 1050 100 A 220 220 0 0 1 1150 280" fill="none" stroke="#2e5d9e" stroke-width="1" opacity="0.12"/>
-  <!-- Subtle arc accent bottom left of monogram zone -->
-  <path d="M 650 420 A 160 160 0 0 0 720 540" fill="none" stroke="#1a2d4a" stroke-width="0.8" opacity="0.08"/>
+  <!-- ======= TEXT BLOCK (left) ======= -->
 
-  <!-- Thin vertical rule separating zones -->
-  <line x1="620" y1="80" x2="620" y2="550" stroke="#1a2d4a" stroke-width="0.5" opacity="0.08"/>
-
-  <!-- ======= TEXT (left side) ======= -->
-
-  <!-- Label -->
+  <!-- Top label -->
   <text x="84" y="108"
     font-family="'JetBrains Mono', monospace"
     font-size="10"
     fill="#2e5d9e"
     letter-spacing="4">EXECUTIVO COMERCIAL &amp; CONSULTOR</text>
 
-  <!-- Rule under label -->
-  <rect x="84" y="118" width="300" height="1" fill="#1a2d4a" opacity="0.15"/>
+  <rect x="84" y="118" width="300" height="1" fill="#1a2d4a" opacity="0.18"/>
 
   <!-- Name line 1 -->
-  <text x="84" y="240"
+  <text x="84" y="230"
     font-family="'Cormorant Garamond', Georgia, serif"
-    font-size="96"
+    font-size="92"
     font-weight="300"
     fill="#1a2d4a"
     letter-spacing="-2">Clebson</text>
 
   <!-- Name line 2 italic blue -->
-  <text x="84" y="344"
+  <text x="84" y="326"
     font-family="'Cormorant Garamond', Georgia, serif"
-    font-size="96"
+    font-size="92"
     font-style="italic"
     font-weight="300"
     fill="#2e5d9e"
-    letter-spacing="-2">Castro</text>
+    letter-spacing="-2">Castro.</text>
 
-  <!-- Role -->
-  <text x="84" y="418"
+  <!-- Thin rule -->
+  <rect x="84" y="370" width="560" height="1" fill="#1a2d4a" opacity="0.15"/>
+
+  <!-- Tagline -->
+  <text x="84" y="408"
+    font-family="'Cormorant Garamond', Georgia, serif"
+    font-size="26"
+    font-style="italic"
+    fill="#1a2d4a"
+    opacity="0.75">Estratégia que vira resultado.</text>
+
+  <!-- Role chip -->
+  <text x="84" y="456"
     font-family="'JetBrains Mono', monospace"
     font-size="11"
     fill="#1a2d4a"
-    letter-spacing="1"
-    opacity="0.55">Franchising · B2B · Growth · IA aplicada</text>
+    letter-spacing="1.5"
+    opacity="0.6">Franchising · B2B · Growth · IA aplicada</text>
 
   <!-- Thin rule before brands -->
-  <rect x="84" y="448" width="460" height="1" fill="#1a2d4a" opacity="0.1"/>
+  <rect x="84" y="484" width="560" height="1" fill="#1a2d4a" opacity="0.1"/>
 
   <!-- Brands row -->
-  <text x="84" y="474"
+  <text x="84" y="510"
     font-family="'JetBrains Mono', monospace"
     font-size="10"
     fill="#1a2d4a"
-    letter-spacing="2"
-    opacity="0.35">Unilever · Coca-Cola · Citi · Unimed</text>
+    letter-spacing="2.5"
+    opacity="0.4">UNILEVER · COCA-COLA · CITI · UNIMED</text>
 
-  <!-- Bottom author stamp -->
-  <text x="84" y="570"
+  <!-- Bottom URL stamp -->
+  <text x="84" y="578"
     font-family="'JetBrains Mono', monospace"
     font-size="10"
     fill="#2e5d9e"
     letter-spacing="3"
-    opacity="0.45">clebsoncastro.com.br</text>
+    opacity="0.55">clebsoncastro.com.br</text>
 
+  <!-- ======= PHOTO BLOCK (right) ======= -->
+
+  <!-- Photo frame background (editorial beige, slightly darker) -->
+  <rect x="760" y="70" width="360" height="490" rx="4" ry="4" fill="#ece8df"/>
+
+  <!-- Photo — fits 100% inside frame (meet) -->
+  <image
+    xlink:href="cleberson.jpeg"
+    x="760" y="70"
+    width="360" height="490"
+    preserveAspectRatio="xMidYMid meet"
+    clip-path="url(#photoClip)"/>
+
+  <!-- Gradient overlay on photo -->
+  <rect x="760" y="70" width="360" height="490" rx="4" ry="4" fill="url(#photoOverlay)"/>
+
+  <!-- Thin frame border on photo -->
+  <rect x="760" y="70" width="360" height="490" rx="4" ry="4" fill="none" stroke="#1a2d4a" stroke-width="1" opacity="0.22"/>
+
+  <!-- Corner ticks (editorial detail) -->
+  <g stroke="#2e5d9e" stroke-width="1.5" opacity="0.75">
+    <line x1="748" y1="70" x2="760" y2="70"/>
+    <line x1="760" y1="58" x2="760" y2="70"/>
+    <line x1="1120" y1="70" x2="1132" y2="70"/>
+    <line x1="1120" y1="58" x2="1120" y2="70"/>
+    <line x1="748" y1="560" x2="760" y2="560"/>
+    <line x1="760" y1="560" x2="760" y2="572"/>
+    <line x1="1120" y1="560" x2="1132" y2="560"/>
+    <line x1="1120" y1="560" x2="1120" y2="572"/>
+  </g>
+
+  <!-- Caption below photo -->
+  <text x="760" y="592"
+    font-family="'JetBrains Mono', monospace"
+    font-size="9"
+    fill="#1a2d4a"
+    letter-spacing="3"
+    opacity="0.45">15+ ANOS · RESULTADO COM MÉTODO</text>
 </svg>
